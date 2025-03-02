@@ -1,0 +1,17 @@
+
+# Archivos de compilación
+build/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+# Archivos de configuración del IDE
+.settings/
+.cproject
+.project
+
+# Otros archivos temporales
+.DS_Store
