@@ -49,6 +49,9 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+void move_servo(uint16_t position); //Funciones servomotor
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 extern UART_HandleTypeDef huart2;

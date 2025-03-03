@@ -29,6 +29,7 @@ void init_door_state(void) {
     HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);          // Enciende LED rojo
     led_state = false;                                                        // Actualiza variable de estado
     HAL_UART_Transmit(&huart2, (uint8_t*)" Estado inicial: Puerta cerrada\r\n", 33, HAL_MAX_DELAY);  // Envía mensaje de estado
+    move_servo(500); // Posición inicial puerta cerrada (0grados)
 }
 
 /* Versión anterior de la función check_keypad (comentada para referencia)
@@ -136,6 +137,7 @@ void control_action(uint8_t key, ring_buffer_t *rb) {
     // Acciones para otras teclas de control
     switch(key) {
         case 'A':  // Abrir puerta
+            move_servo(500); // Posición para abrir la puerta (0grados)
             HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);    // Apaga LED rojo
             HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);  // Enciende LED verde
             led_state = true;
@@ -143,6 +145,7 @@ void control_action(uint8_t key, ring_buffer_t *rb) {
             break;
             
         case 'C':  // Cerrar puerta
+            move_servo(2000); // Posición para cerrar la puerta (180 grados)
             HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);  // Apaga LED verde
             HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);        // Enciende LED rojo
             led_state = false;

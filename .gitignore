@@ -1,17 +1,32 @@
 
-# Archivos de compilación
+# Carpetas de compilación
 build/
 Debug/
 Release/
+
+# Archivos objeto, binarios y temporales
 *.o
 *.d
 *.elf
 *.hex
 *.bin
-# Archivos de configuración del IDE
+*.map
+*.lst
+
+# Carpetas y archivos específicos del IDE
 .settings/
 .cproject
 .project
+.vscode/
+*.launch
 
-# Otros archivos temporales
+# Archivos de respaldo del editor
+*~
+*.bak
+
+# Archivos del sistema operativo
 .DS_Store
+Thumbs.db
+
+# Archivos de configuración personal (ajusta según necesites)
+# config.h
