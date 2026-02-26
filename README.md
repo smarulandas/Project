@@ -1,4 +1,7 @@
 # Sistema de Control de Acceso Inteligente
+**Autores:**
+- Felipe Idárraga Quintero
+- Samuel Marulanda Salazar
 
 ## Introducción
 
@@ -25,3 +28,4 @@ Para ayudar a entender y modificar el sistema, se incluyen varios diagramas que 
 3. [Diagrama de Componentes](./documentación/diagrama-componentes.md): Estructura interna del software
 4. [Diagrama de Bloques Software](./documentación/diagrama-bloques-software.md): Flujo de ejecución principal
 5. [Diagrama de Flujo](./documentación/diagrama-flujo.md): Implementación detallada del código
+
