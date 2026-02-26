@@ -1,10 +1,25 @@
-
-# Carpetas de compilación
+# =========================
+# Build folders
+# =========================
 build/
+cmake-build-*/
 Debug/
 Release/
 
-# Archivos objeto, binarios y temporales
+# =========================
+# CMake generated files
+# =========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+compile_commands.json
+.ninja_deps
+.ninja_log
+
+# =========================
+# Binary and object files
+# =========================
 *.o
 *.d
 *.elf
@@ -13,20 +28,23 @@ Release/
 *.map
 *.lst
 
-# Carpetas y archivos específicos del IDE
+# =========================
+# IDE files
+# =========================
+.vscode/
 .settings/
 .cproject
 .project
-.vscode/
 *.launch
 
-# Archivos de respaldo del editor
+# =========================
+# Editor backup files
+# =========================
 *~
 *.bak
 
-# Archivos del sistema operativo
+# =========================
+# OS files
+# =========================
 .DS_Store
 Thumbs.db
-
-# Archivos de configuración personal (ajusta según necesites)
-# config.h
